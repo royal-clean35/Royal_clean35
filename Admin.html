@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Royal Clean 35 – Lavage auto</title>
+<meta name="robots" content="noindex">
+<title>Admin – Royal Clean 35</title>
 <style>
-:root{--bg:#f5f8fb;--card:#fff;--text:#0f1b2d;--muted:#5b6b80;--accent:#0a84ff;--line:#e1e8f0;color-scheme:light}
+:root{--bg:#f5f8fb;--card:#fff;--text:#0f1b2d;--muted:#5b6b80;--accent:#0a84ff;--line:#e1e8f0;--red:#d93025;color-scheme:light}
 @media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#131c2e;--text:#eaf1fb;--muted:#9fb0c6;--line:#22304a;color-scheme:dark}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
-header{padding:40px 18px 30px;text-align:center;background:linear-gradient(160deg,#0a84ff,#00c2a8);color:#fff}
-h1{margin:0 0 6px}main{max-width:640px;margin:0 auto;padding:22px 18px}
-h2{margin:26px 0 10px}.step,.card,form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
-.step b{color:var(--accent)}.step p,.muted{color:var(--muted);margin:2px 0 0;font-size:.92rem}
-.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.prices .card{text-align:center;margin:0}
-.prices strong{display:block;color:var(--accent)}
-form{display:grid;gap:12px}label{display:grid;gap:4px;font-size:.88rem;color:var(--muted)}
-input,select,textarea,button{font:inherit;padding:11px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);width:100%}
-button{background:var(--accent);color:#fff;border:0;font-weight:700}button:disabled{opacity:.6}
-#msg{font-weight:600}
-</style></head><body>
-<header><h1>Royal Clean 35</h1><div>Lavage auto à la main, méthode pro</div></header>
-<main>
-<h2>Notre technique</h2>
-<div class="step"><b>1. Pré-rinçage</b><p>On retire sable et grosse saleté avant tout contact.</p></div>
-<div class="step"><b>2. Mousse active</b><p>Elle décolle la crasse, puis on rince.</p></div>
-<div class="step"><b>3. Lavage au gant microfibre</b><p>Deux seaux, du haut vers le bas, sans appuyer.</p></div>
-<div class="step"><b>4. Jantes</b><p>Produit et brosses dédiés.</p></div>
-<div class="step"><b>5. Séchage</b><p>Microfibre par tamponnage, sans rayures.</p></div>
-<div class="step"><b>6. Finition</b><p>Vitres, plastiques et intérieur.</p></div>
-<h2>Tarifs</h2>
-<div class="prices"><div class="card">Extérieur<strong>15 € / 25 €</strong></div><div class="card">Intérieur<strong>30 € / 45 €</strong></div><div class="card">Complet<strong>40 € / 65 €</strong></div></div>
-<p class="muted">Pas trop sale / très sale. Devis gratuit. 2h30 si très sale.</p>
-<h2>Réserver</h2>
-<form id="f">
-<label>Nom<input name="nom" required></label>
-<label>Téléphone<input name="tel" type="tel" required></label>
-<label>Formule<select name="formule"><option>Extérieur</option><option>Intérieur</option><option selected>Complet</option></select></label>
-<label>État du véhicule<select name="etat"><option>Pas trop sale</option><option>Très sale</option></select></label>
-<label>Date<input name="date" id="date" type="date" required></label>
-<label>Créneau<select name="creneau" id="cr" required></select></label>
-<label>Photo du véhicule (optionnel)<input name="photo" type="file" accept="image/*"></label>
-<label>Message<textarea name="message" rows="2"></textarea></label>
-<button id="go" type="submit">Envoyer la demande</button>
-<div id="msg"></div>
-</form></main>
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+main{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:1.3rem;margin:6px 0 12px}
+input,select,button{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text)}
+button{background:var(--accent);color:#fff;border:0;font-weight:600;cursor:pointer}button.red{background:var(--red)}button.gray{background:var(--muted)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.bar>*{flex:1}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.top{display:flex;justify-content:space-between;gap:8px;font-weight:700}
+.muted{color:var(--muted);font-size:.9rem}.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.row>*{flex:1}
+img{max-width:100%;border-radius:10px;margin-top:8px;max-height:260px;object-fit:cover}
+a{color:var(--accent)}#login{display:grid;gap:10px;max-width:340px;margin:60px auto}
+.tag{font-size:.78rem;padding:2px 8px;border-radius:99px;background:var(--line)}
+</style></head><body><main>
+<div id="login"><h1>Admin Royal Clean 35</h1>
+<input id="em" type="email" placeholder="E-mail" autocomplete="username">
+<input id="pw" type="password" placeholder="Mot de passe" autocomplete="current-password">
+<button id="in">Se connecter</button><div id="err" class="muted"></div></div>
+<div id="app" hidden>
+<h1>Réservations</h1>
+<div class="bar"><select id="flt"><option value="">Tous les statuts</option><option>en attente</option><option>confirmée</option><option>terminée</option><option>annulée</option></select>
+<button id="rf">Actualiser</button><button id="out" class="gray">Déconnexion</button></div>
+<div id="cnt" class="muted"></div><div id="list"></div></div>
+</main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script>
 var SUPABASE_URL="COLLE_TON_URL_ICI", SUPABASE_KEY="COLLE_TA_CLE_ANON_ICI";
 var sb=supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
 var $=function(i){return document.getElementById(i)};
-var SLOTS={0:["10h-12h","14h-16h","16h-18h"],6:["10h-12h","14h-16h","16h-18h"],3:["14h-16h","16h-18h"]};
-$("date").min=new Date().toISOString().slice(0,10);
-$("date").addEventListener("change",async function(){
-  var d=this.value, cr=$("cr"); cr.innerHTML="";
-  var s=SLOTS[new Date(d+"T12:00").getDay()]||[];
-  if(!s.length){cr.innerHTML="<option value=''>Aucun créneau ce jour</option>";return}
-  var r=await sb.from("creneaux_pris").select("creneau").eq("date",d);
-  var pris=(r.data||[]).map(function(x){return x.creneau});
-  s.forEach(function(c){var o=document.createElement("option");o.value=c;o.textContent=c+(pris.indexOf(c)>-1?" (complet)":"");o.disabled=pris.indexOf(c)>-1;cr.appendChild(o)});
-  if(cr.selectedOptions[0]&&cr.selectedOptions[0].disabled)cr.value="";
+var ST=["en attente","confirmée","terminée","annulée"];
+function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML}
+async function show(){
+  var s=await sb.auth.getSession();var ok=!!s.data.session;
+  $("login").hidden=ok;$("app").hidden=!ok;if(ok)load();
+}
+async function load(){
+  var q=sb.from("reservations").select("*").order("date",{ascending:true});
+  if($("flt").value)q=q.eq("statut",$("flt").value);
+  var r=await q;if(r.error){$("list").textContent="Erreur : "+r.error.message;return}
+  $("cnt").textContent=r.data.length+" réservation(s)";
+  $("list").innerHTML=r.data.map(function(x){
+    return '<div class="card"><div class="top"><span>'+esc(x.nom)+'</span><span class="tag">'+esc(x.statut)+'</span></div>'
+    +'<div class="muted">'+esc(x.date)+' · '+esc(x.creneau)+'</div>'
+    +'<div>'+esc(x.formule)+' ('+esc(x.etat)+')</div>'
+    +'<div><a href="tel:'+esc(x.tel)+'">'+esc(x.tel)+'</a></div>'
+    +(x.message?'<div class="muted">'+esc(x.message)+'</div>':'')
+    +(x.photo_url?'<a href="'+esc(x.photo_url)+'" target="_blank" rel="noopener"><img src="'+esc(x.photo_url)+'" alt="Photo du véhicule"></a>':'')
+    +'<div class="row"><select data-id="'+x.id+'" class="st">'+ST.map(function(s){return '<option'+(s===x.statut?' selected':'')+'>'+s+'</option>'}).join('')+'</select>'
+    +'<button class="red del" data-id="'+x.id+'" data-p="'+esc(x.photo_url||"")+'">Supprimer</button></div></div>';
+  }).join("")||'<p class="muted">Aucune réservation.</p>';
+}
+$("list").addEventListener("change",async function(e){
+  if(!e.target.classList.contains("st"))return;
+  var r=await sb.from("reservations").update({statut:e.target.value}).eq("id",e.target.dataset.id);
+  if(r.error)alert(r.error.message);load();
 });
-$("f").addEventListener("submit",async function(e){
-  e.preventDefault();var f=new FormData(e.target),b=$("go"),m=$("msg");
-  b.disabled=true;m.textContent="Envoi…";
-  try{
-    var url=null,p=f.get("photo");
-    if(p&&p.size){
-      if(p.size>8e6)throw new Error("Photo trop lourde (8 Mo max).");
-      var path=Date.now()+"-"+Math.random().toString(36).slice(2)+".jpg";
-      var u=await sb.storage.from("photos").upload(path,p,{contentType:p.type});
-      if(u.error)throw u.error;
-      url=sb.storage.from("photos").getPublicUrl(path).data.publicUrl;
-    }
-    var r=await sb.from("reservations").insert({nom:f.get("nom"),tel:f.get("tel"),formule:f.get("formule"),etat:f.get("etat"),date:f.get("date"),creneau:f.get("creneau"),message:f.get("message"),photo_url:url});
-    if(r.error){if(r.error.code==="23505")throw new Error("Ce créneau vient d’être pris, choisis-en un autre.");throw r.error}
-    m.textContent="Demande envoyée ! On te recontacte vite.";e.target.reset();$("cr").innerHTML="";
-  }catch(x){m.textContent="Erreur : "+(x.message||"réessaie")}
-  b.disabled=false;
+$("list").addEventListener("click",async function(e){
+  if(!e.target.classList.contains("del"))return;
+  if(!confirm("Supprimer cette réservation ?"))return;
+  var p=e.target.dataset.p;
+  if(p){var n=p.split("/photos/")[1];if(n)await sb.storage.from("photos").remove([n])}
+  var r=await sb.from("reservations").delete().eq("id",e.target.dataset.id);
+  if(r.error)alert(r.error.message);load();
 });
+$("in").onclick=async function(){
+  var r=await sb.auth.signInWithPassword({email:$("em").value,password:$("pw").value});
+  if(r.error)$("err").textContent="Identifiants incorrects.";else show();
+};
+$("out").onclick=async function(){await sb.auth.signOut();show()};
+$("rf").onclick=load;$("flt").onchange=load;
+show();
 </script></body></html>
